@@ -1,48 +1,109 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal CV and portfolio website">
-    <title>Zakaria Ramadan | IT System Administrator</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio Zakaria Ramadan — System Administrator, Cloud and DevOps enthusiast.">
+  <meta name="theme-color" content="#0b1020">
+  <title>Zakaria Ramadan — Systems & Cloud Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Zakaria Ramadan</h1>
-        <p>IT System Administrator | IT Trainer</p>
-    </header>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Zakaria Ramadan home"><span class="brand-mark">ZR</span><span>zakaria<span class="brand-dot">.</span></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka navigasi" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav" id="mainNav" aria-label="Navigasi utama">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact" class="nav-contact">Let's talk <span>↗</span></a>
+    </nav>
+  </header>
 
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>
-                I am an IT professional interested in system administration,
-                Linux, Windows Server, cloud computing, and DevOps.
-            </p>
-        </section>
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="status-dot"></span> OPEN TO OPPORTUNITIES <span class="eyebrow-line"></span> <span class="mono">INDONESIA · GMT+7</span></div>
+        <p class="hero-kicker">Hello, I'm</p>
+        <h1>Zakaria<br><span class="gradient-text">Ramadan.</span></h1>
+        <h2>System Administrator <span class="muted">&</span><br>Cloud / DevOps Enthusiast</h2>
+        <p class="hero-description">I build, operate, and document reliable IT infrastructure — from Windows and Linux environments to cloud platforms, automation, and monitoring.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore my work <span>↗</span></a>
+          <a class="button button-ghost" href="#contact">Get in touch</a>
+        </div>
+        <div class="hero-socials"><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a><span class="social-divider"></span><span class="mono">BASED IN INDONESIA</span></div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="visual-glow"></div>
+        <div class="profile-orbit orbit-a"></div><div class="profile-orbit orbit-b"></div>
+        <div class="profile-card">
+          <div class="profile-card-top"><span class="mono">PROFESSIONAL PROFILE</span><span class="profile-live"><i></i> AVAILABLE</span></div>
+          <div class="profile-avatar">ZR</div>
+          <h3>Infrastructure<br><span>with purpose.</span></h3>
+          <p>Designing, managing, and improving reliable IT environments.</p>
+          <div class="profile-divider"></div>
+          <div class="profile-focus"><span class="mono">CORE FOCUS</span><div><span>Systems</span><span>Cloud</span><span>Automation</span></div></div>
+        </div>
+        <div class="floating-chip chip-top"><span class="chip-icon">▣</span><span><b>Infrastructure</b><small>Build & operate</small></span></div>
+        <div class="floating-chip chip-bottom"><span class="chip-icon chip-blue">↗</span><span><b>Continuous growth</b><small>Learn & improve</small></span></div>
+        <div class="hero-index mono">01 / 07 <span>— PORTFOLIO</span></div>
+      </div>
+      <a class="scroll-cue mono" href="#about"><span class="scroll-line"></span> SCROLL TO EXPLORE</a>
+    </section>
 
-        <section>
-            <h2>Technical Skills</h2>
-            <ul>
-                <li>Windows Server</li>
-                <li>Linux Administration</li>
-                <li>Azure Cloud</li>
-                <li>Docker and DevOps</li>
-                <li>Monitoring with Zabbix and Grafana</li>
-            </ul>
-        </section>
+    <section class="section-wrap about-section" id="about">
+      <div class="section-label"><span>01</span> ABOUT ME</div>
+      <div class="about-grid">
+        <div><p class="section-kicker">A little introduction</p><h2 class="section-title">Technology works best<br>when <span class="gradient-text">it just works.</span></h2></div>
+        <div class="about-copy"><p>I'm an IT professional focused on system administration, infrastructure operations, and technical education. My work and learning span Windows Server, Linux, virtualization, cloud services, and monitoring.</p><p>I enjoy turning complex technical concepts into practical systems, clear documentation, and hands-on learning experiences. This portfolio is a living record of that journey.</p><div class="about-note"><span class="note-mark">✳</span><span>Curious by nature. Practical by habit. Always learning.</span></div></div>
+      </div>
+      <div class="stats-grid"><div class="stat"><strong>5<span>+</span></strong><small>Years in IT & training*</small></div><div class="stat"><strong>03</strong><small>Core environments</small></div><div class="stat"><strong>∞</strong><small>Things to keep learning</small></div><p class="stats-footnote">*Ringkasan pengalaman berdasarkan perjalanan profesional; detail periode dapat disesuaikan.</p></div>
+    </section>
 
-        <section>
-            <h2>Experience</h2>
-            <p>IT Trainer and System Administrator</p>
-        </section>
-    </main>
+    <section class="section-wrap skills-section" id="skills">
+      <div class="section-label"><span>02</span> TECHNICAL TOOLKIT</div>
+      <div class="section-heading"><div><p class="section-kicker">Tools of the trade</p><h2 class="section-title">My technical <span class="gradient-text">stack.</span></h2></div><p class="section-aside">A practical toolkit for managing infrastructure, improving reliability, and automating everyday operations.</p></div>
+      <div class="skills-grid">
+        <article class="skill-card"><div class="skill-icon">▣</div><div class="skill-meta"><span class="mono">01 / SYSTEMS</span><span class="skill-arrow">↗</span></div><h3>Systems Administration</h3><p>Managing server environments, identity, access, and core services.</p><div class="tag-list"><span>Windows Server</span><span>Active Directory</span><span>Group Policy</span><span>Linux</span></div></article>
+        <article class="skill-card"><div class="skill-icon">☁</div><div class="skill-meta"><span class="mono">02 / CLOUD</span><span class="skill-arrow">↗</span></div><h3>Cloud & Virtualization</h3><p>Deploying workloads and building flexible virtual infrastructure.</p><div class="tag-list"><span>Microsoft Azure</span><span>VMware</span><span>Proxmox</span><span>Hyper-V</span></div></article>
+        <article class="skill-card"><div class="skill-icon">⌘</div><div class="skill-meta"><span class="mono">03 / AUTOMATION</span><span class="skill-arrow">↗</span></div><h3>DevOps & Automation</h3><p>Making delivery and operational tasks more repeatable.</p><div class="tag-list"><span>Docker</span><span>Jenkins</span><span>Git</span><span>Bash</span><span>PowerShell</span></div></article>
+        <article class="skill-card"><div class="skill-icon">◉</div><div class="skill-meta"><span class="mono">04 / OBSERVABILITY</span><span class="skill-arrow">↗</span></div><h3>Monitoring & Observability</h3><p>Understanding system health through metrics, dashboards, and alerts.</p><div class="tag-list"><span>Zabbix</span><span>Grafana</span><span>Prometheus</span><span>Network Monitoring</span></div></article>
+      </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 Zakaria Ramadan</p>
-    </footer>
+    <section class="section-wrap experience-section" id="experience">
+      <div class="section-label"><span>03</span> EXPERIENCE</div>
+      <div class="section-heading"><div><p class="section-kicker">Where I've been</p><h2 class="section-title">Experience & <span class="gradient-text">growth.</span></h2></div><p class="section-aside">A snapshot of the roles and responsibilities that have shaped my technical perspective.</p></div>
+      <div class="timeline">
+        <article class="timeline-item"><div class="timeline-date mono">CURRENT</div><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-top"><h3>IT Trainer & Cloud / System Administrator</h3><span class="timeline-type">Professional role</span></div><p class="timeline-company">ID Networkers <span>· Indonesia</span></p><p>Delivering technical training and working with infrastructure topics across Windows Server, Linux, DevOps, monitoring, virtualization, and Microsoft Azure. Current work also includes Azure cloud operations and virtual machine deployment.</p><div class="tag-list"><span>Technical Training</span><span>Azure</span><span>Linux</span><span>Windows Server</span></div></div></article>
+        <article class="timeline-item"><div class="timeline-date mono">PREVIOUS</div><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-top"><h3>Windows Server Administrator</h3><span class="timeline-type">Infrastructure</span></div><p class="timeline-company">Infrastructure Operations</p><p>Worked with Windows Server environments, including Active Directory, file services, and namespace-related administration.</p><div class="tag-list"><span>Active Directory</span><span>File Services</span><span>Windows Server</span></div></div></article>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section class="section-wrap projects-section" id="projects">
+      <div class="section-label"><span>04</span> SELECTED WORK</div>
+      <div class="section-heading"><div><p class="section-kicker">Labs, builds & experiments</p><h2 class="section-title">Things I've been <span class="gradient-text">building.</span></h2></div><p class="section-aside">Hands-on projects and lab environments. Some are ongoing experiments — documented as part of continuous learning.</p></div>
+      <div class="projects-grid">
+        <article class="project-card project-featured"><div class="project-visual visual-monitor"><div class="visual-top"><span>INFRASTRUCTURE / 01</span><span>↗</span></div><div class="monitor-ui"><div class="monitor-sidebar"><i></i><i></i><i></i><i></i></div><div class="monitor-main"><div class="monitor-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="monitor-chart"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div></div></div><div class="project-info"><div class="project-type mono">MONITORING / HOMELAB</div><h3>Infrastructure Monitoring Lab</h3><p>Exploring centralized monitoring with Zabbix and Grafana to visualize infrastructure health, metrics, and alerting workflows.</p><div class="project-footer"><div class="tag-list"><span>Zabbix</span><span>Grafana</span><span>Proxmox</span></div><span class="project-number mono">01</span></div></div></article>
+        <article class="project-card"><div class="project-visual visual-containers"><div class="visual-top"><span>SELF-HOSTED / 02</span><span>↗</span></div><div class="container-stack"><div class="container-box">▣ <b>nginx</b><small>reverse proxy</small></div><div class="container-box">▣ <b>Docker</b><small>app services</small></div><div class="container-box">▣ <b>Database</b><small>persistent data</small></div></div></div><div class="project-info"><div class="project-type mono">SELF-HOSTED / HOMELAB</div><h3>Self-hosted Services</h3><p>Operating personal services with Docker Compose, reverse proxy, HTTPS, and private networking.</p><div class="project-footer"><div class="tag-list"><span>Docker</span><span>Nginx Proxy Manager</span></div><span class="project-number mono">02</span></div></div></article>
+        <article class="project-card"><div class="project-visual visual-pipeline"><div class="visual-top"><span>DELIVERY / 03</span><span>↗</span></div><div class="pipeline-flow"><div class="pipeline-node">CODE</div><b>···</b><div class="pipeline-node">TEST</div><b>···</b><div class="pipeline-node pipeline-active">DEPLOY</div></div><div class="pipeline-caption mono">CONTINUOUS INTEGRATION / DELIVERY</div></div><div class="project-info"><div class="project-type mono">AUTOMATION / WORKSHOP</div><h3>CI/CD Portfolio Pipeline</h3><p>A learning project using GitHub Actions to lint, test, scan, build, and deploy a static portfolio website.</p><div class="project-footer"><div class="tag-list"><span>GitHub Actions</span><span>Playwright</span><span>Trivy</span></div><span class="project-number mono">03</span></div></div></article>
+      </div>
+    </section>
+
+    <section class="section-wrap learning-section" id="learning">
+      <div class="section-label"><span>05</span> CONTINUOUS LEARNING</div>
+      <div class="learning-panel"><div><p class="section-kicker">Currently exploring</p><h2 class="section-title">Stay curious.<br><span class="gradient-text">Keep improving.</span></h2><p class="learning-copy">Technology never stands still. I'm continuously improving my skills through hands-on labs, documentation, technical training, and real-world problem solving.</p></div><div class="learning-list"><div><span class="learning-index mono">01</span><span>Microsoft Azure administration</span><span class="learning-symbol">↗</span></div><div><span class="learning-index mono">02</span><span>Infrastructure as Code & automation</span><span class="learning-symbol">↗</span></div><div><span class="learning-index mono">03</span><span>Linux & platform engineering</span><span class="learning-symbol">↗</span></div><div><span class="learning-index mono">04</span><span>CI/CD & secure delivery</span><span class="learning-symbol">↗</span></div></div></div>
+    </section>
+
+    <section class="section-wrap contact-section" id="contact">
+      <div class="section-label"><span>06</span> GET IN TOUCH</div>
+      <div class="contact-panel"><div><p class="section-kicker">Have a project or opportunity?</p><h2>Let's build<br><span class="gradient-text">something reliable.</span></h2><p class="contact-copy">Open to conversations about infrastructure, system administration, cloud, technical training, and collaboration.</p></div><div class="contact-links"><a href="mailto:hello@example.com"><span class="contact-link-label mono">EMAIL</span><strong>hello@example.com</strong><span>↗</span></a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer"><span class="contact-link-label mono">LINKEDIN</span><strong>Connect professionally</strong><span>↗</span></a><a href="https://github.com/" target="_blank" rel="noreferrer"><span class="contact-link-label mono">GITHUB</span><strong>Explore repositories</strong><span>↗</span></a></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand" href="#home"><span class="brand-mark">ZR</span><span>zakaria<span class="brand-dot">.</span></span></a><p>Designed & built with curiosity.</p><span class="mono">© <span id="currentYear">2026</span> ZAKARIA RAMADAN</span><a class="back-top mono" href="#home">BACK TO TOP ↑</a></footer>
 </body>
 </html>
