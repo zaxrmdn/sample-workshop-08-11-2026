@@ -1,7 +1,9 @@
+
 {
   "name": "cv-portfolio-workshop",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "lint:html": "htmlhint index.html",
     "lint:js": "eslint script.js",
