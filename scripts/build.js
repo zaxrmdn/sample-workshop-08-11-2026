@@ -1,45 +1,28 @@
-import {
-  existsSync,
-  mkdirSync,
-  rmSync,
-  cpSync,
-  writeFileSync,
-} from 'node:fs';
+import { cp, mkdir, rm, access, writeFile } from 'node:fs/promises';
 
-const sourceFiles = [
-  'index.html',
-  'style.css',
-  'script.js',
-];
+const sourceFiles = ['index.html', 'style.css', 'script.js'];
 
-console.log('Starting production build...');
-
-// Pastikan source website tersedia
 for (const file of sourceFiles) {
-  if (!existsSync(file)) {
-    throw new Error(`Required source file not found: ${file}`);
+  try {
+    await access(file);
+  } catch {
+    console.error(`Required source file not found: ${file}`);
+    process.exit(1);
   }
 }
 
-// Bersihkan hasil build sebelumnya
-rmSync('dist', { recursive: true, force: true });
+await rm('dist', { recursive: true, force: true });
+await mkdir('dist', { recursive: true });
 
-// Buat direktori output
-mkdirSync('dist', { recursive: true });
-
-// Salin source website
 for (const file of sourceFiles) {
-  cpSync(file, `dist/${file}`);
-  console.log(`Copied: ${file}`);
+  await cp(file, `dist/${file}`);
 }
 
-// Salin assets jika tersedia
-if (existsSync('assets')) {
-  cpSync('assets', 'dist/assets', { recursive: true });
-  console.log('Copied: assets/');
+await writeFile('dist/.nojekyll', '');
+try {
+  await cp('assets', 'dist/assets', { recursive: true });
+} catch {
+  // Assets directory is optional.
 }
 
-// GitHub Pages helper
-writeFileSync('dist/.nojekyll', '');
-
-console.log('Build completed successfully!');
+console.log('Build completed: website copied to dist/');

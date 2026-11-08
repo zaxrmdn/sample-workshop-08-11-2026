@@ -1,49 +1,36 @@
-# CV Portfolio — GitHub Actions CI/CD Workshop
+# Portfolio Website Template — Workshop CI/CD
 
-Static CV website with CI/CD: linting, browser tests, security scan, build artifact, and GitHub Pages deployment. No VPS required.
+Template website portfolio profesional untuk peserta workshop. Template ini **tidak berisi identitas atau riwayat karier milik orang tertentu**. Ganti semua teks di dalam tanda kurung siku (`[...]`) dengan informasi masing-masing peserta.
 
-## Tools
-- HTMLHint: HTML linting
-- ESLint: JavaScript linting
-- Playwright: browser testing
-- Trivy: vulnerability, misconfiguration, and secret scan
-- GitHub Actions and GitHub Pages
+## Isi project
+- `index.html`, `style.css`, `script.js`: website portfolio responsif.
+- `scripts/build.js`: menyiapkan folder `dist`.
+- `tests/portfolio.spec.js`: pengujian browser dengan Playwright.
+- `.github/workflows/ci-cd.yml`: pipeline lint → test → security scan → build → deploy GitHub Pages.
+- `PANDUAN-PENGISIAN.md`: panduan mengisi konten portfolio.
 
-## Run locally (Node.js 22+)
+## Mulai
+1. Extract ZIP ini.
+2. Upload **isi folder** ke root repository GitHub.
+3. Pastikan branch utama bernama `main` atau sesuaikan workflow.
+4. Buka **Settings → Pages → Build and deployment → Source**, pilih **GitHub Actions**.
+5. Jalankan secara lokal atau push ke GitHub untuk menjalankan workflow.
+
+## Menjalankan secara lokal
+Gunakan Node.js 22 atau versi LTS yang kompatibel.
 ```bash
 npm install
-npx playwright install chromium
 npm run lint
-npm test
 npm run build
-npm run preview
+npx playwright install chromium
+npm test
 ```
-Open http://127.0.0.1:4173.
 
-## Pipeline
-1. Lint: HTMLHint and ESLint.
-2. Test: Playwright tests homepage, sections, theme toggle, footer year, and mobile menu.
-3. Security: Trivy scans filesystem for HIGH/CRITICAL findings.
-4. Build: packages production files into `dist`.
-5. Artifact: uploads Pages artifact.
-6. Deploy: deploys only on push to `main`, after all CI jobs pass.
+## Mengisi template
+Buka `PANDUAN-PENGISIAN.md`, lalu edit `index.html`. Cari teks dalam tanda `[...]` dan ganti dengan informasi peserta. Hapus bagian yang tidak relevan, termasuk statistik atau proyek yang belum dimiliki. Jangan menampilkan data pribadi atau informasi perusahaan yang bersifat rahasia.
 
-Pull requests run CI but do not deploy.
-
-## Enable GitHub Pages
-1. Create a repository and push the project to branch `main`.
-2. Open Settings → Pages.
-3. Set Build and deployment Source to **GitHub Actions**.
-4. Monitor the `CV Website CI/CD` workflow in Actions.
-5. Open the URL shown by the `github-pages` environment after successful deployment.
-
-## Optional manual approval
-Open Settings → Environments → github-pages and add Required reviewers if this feature is available for the repository/plan. Creating an environment alone does not enforce approval.
-
-## Workshop troubleshooting
-- Add an unused variable to `script.js` to fail ESLint.
-- Change a Playwright expectation to fail browser testing.
-- Open a pull request and verify CI runs without deployment.
-- Push to `main` after checks pass to trigger deployment.
-
-Replace sample profile details in `index.html`; customize design in `style.css` and interactions in `script.js`.
+## Catatan CI/CD
+- `npm install` digunakan agar peserta dapat memulai tanpa `package-lock.json`. Untuk praktik produksi, commit `package-lock.json` lalu gunakan `npm ci`.
+- Trivy memindai repository dan dapat menggagalkan pipeline bila menemukan temuan HIGH/CRITICAL, sesuai konfigurasi security gate.
+- GitHub Pages harus menggunakan source **GitHub Actions**.
+- Website memakai Google Fonts dari CDN; fallback font tetap tersedia jika CDN tidak dapat diakses.
