@@ -1,4 +1,7 @@
-
+"scripts": {
+  "build": "node scripts/build.js",
+  "preview": "http-server dist -p 4173 -a 127.0.0.1"
+}
 {
   "name": "cv-portfolio-workshop",
   "version": "1.0.0",
