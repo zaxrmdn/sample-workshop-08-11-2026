@@ -54,6 +54,13 @@ jobs:
 
       - name: Build website for testing
         run: npm run build
+      
+      - name: Verify build output
+        run: |
+          echo "Checking dist directory..."
+          ls -lah dist/
+          test -f dist/index.html
+          echo "Build output is valid"
 
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
